@@ -7,15 +7,10 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 </style>
-<link rel="stylesheet" href="flexslider.css" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="jquery.flexslider.js"></script>
-<script type="text/javascript" charset="utf-8">
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide"
-  });
-});	
+<script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+  const swiper = new Swiper(...)
 </script>	  
 <script src="https://www.w3schools.com/lib/w3.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -25,18 +20,24 @@ $(window).load(function() {
   </head>
   <body>
 
-<div class="flexslider" style="direction:rtl">
-  <ul class="slides">
-    <li>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Female_dalmatian_head_shot.jpg/1280px-Female_dalmatian_head_shot.jpg" />
-    </li>
-    <li>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Shiba_Inu_black-and-tan.jpg/1200px-Shiba_Inu_black-and-tan.jpg" />
-    </li>
-    <li>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Labrador_Farbe_charcoal.jpg" />
-    </li>
-  </ul>
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
 </div>		  
 	  <div>
   <canvas id="myChart"></canvas>
